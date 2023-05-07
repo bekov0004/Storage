@@ -1,0 +1,31 @@
+@model List<Domain.Dtos.GetParisheDto>
+
+    <h1>Parishe</h1>
+
+    <table class="table">
+    <thead>
+          <tr>
+            <th>Product Code</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total Amount</th>
+            <th>Provider</th>
+            <th>View</th>
+          </tr>
+    </thead>
+    <tbody>
+      @foreach(var parishe in Model)
+      {
+        <tr>
+           <td>@parishe.ProductCode</td>
+           <td>@parishe.Name</td>
+           <td>@parishe.Quantity</td>
+           <td>@parishe.Price</td>
+           <td>@parishe.TotalAmount</td>
+           <td>@parishe.Provider</td>
+           <td><a href="View/@parishe.Id">View</a></td>
+        </tr>
+      }
+    </tbody>
+    </table>

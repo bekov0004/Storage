@@ -57,6 +57,7 @@ public class ParisheService : IParisheService
     {
         var query = _context.Parishes.Select(x=> new GetParisheDto()
         {
+               Id = x.Id,
                ProductCode = x.ProductCode,
                Name = x.Name,
                Quantity = x.Quantity,
